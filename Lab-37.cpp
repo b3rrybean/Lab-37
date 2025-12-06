@@ -22,23 +22,31 @@ int main() {
     }
 
     // hash table
-    map<int, list<string> hash_table;
+    map<int, list<string>> hash_table;
 
     string code;
 
     while (fin >> code) {
-        int index = gen-hash_index(code);
+        int index = gen_hash_index(code);
         hash_table[index].push_back(code);
     }
 
     int shown = 0;
-    for (auto &enrty : hash_table) {
+    for (auto &entry : hash_table) {
         if (shown >= 100) break;
 
         int hash_index = entry.first;
         const list<string> &codes = entry.second;
 
         cout << "Hash index: " << hash_index << " -> ";
+
+        // print
+        for (const string &s : codes) {
+            cout << s << " ";
+        }
+
+        cout << endl;
+        shown++;
     }
 
     return 0;
