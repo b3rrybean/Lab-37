@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <map>
+#include <list>
 using namespace std;
 
-int sum_ascii(const string &s) {
+int gen_hash_index(const string &s) {
     int total = 0;
     for (char c : s) {
         total += (int)c;
@@ -19,14 +21,25 @@ int main() {
         return 1;
     }
 
+    // hash table
+    map<int, list<string> hash_table;
+
     string code;
-    long long grand_total = 0;
 
     while (fin >> code) {
-        grand_total += sum_ascii(code);
+        int index = gen-hash_index(code);
+        hash_table[index].push_back(code);
     }
 
-    cout << "Grand total ASCII sum = " << grand_total << endl;
+    int shown = 0;
+    for (auto &enrty : hash_table) {
+        if (shown >= 100) break;
+
+        int hash_index = entry.first;
+        const list<string> &codes = entry.second;
+
+        cout << "Hash index: " << hash_index << " -> ";
+    }
 
     return 0;
 }
