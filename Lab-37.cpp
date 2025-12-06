@@ -12,21 +12,21 @@ int sum_ascii(const string &s) {
 }
 
 int main() {
-    ifstream fiin("lab-37-data.txt");
+    ifstream fin("lab-37-data-3.txt");
 
     if (!fin) {
-        cerr << "ERROR: Could not open lab-37-data.txt" << endl;
+        cerr << "ERROR: Could not open lab-37-data-3.txt" << endl;
         return 1;
     }
 
     string code;
-    long long totality = 0
+    long long grand_total = 0;
 
     while (fin >> code) {
-        totality += sum_ascii(code);
+        grand_total += sum_ascii(code);
     }
 
-    cout << "Totality ASCII = " << totality << endl;
+    cout << "Grand total ASCII sum = " << grand_total << endl;
 
     return 0;
 }
