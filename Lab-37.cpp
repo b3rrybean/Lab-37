@@ -1,14 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    char a = 'A';
-    cout << a << endl;
-    cout << (int) a << endl;
+int sum_ascii(const string &s) {
+    int total = 0;
+    for (char c : s) {
+        total += (int)c;
+    }
+    return total;
+}
 
-    int b = 66;
-    cout << b << endl;
-    cout << (char) b << endl;
+int main() {
+    string test = "hello";
+
+    cout << "Sum ASCII of \"" << test << "\" = "
+         << sum_ascii(test) << endl;
 
     return 0;
 }
