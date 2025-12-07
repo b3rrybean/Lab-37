@@ -65,8 +65,17 @@ void add_key(map<int, list<string>> &hash_table) {
 }
 
 void remove_key(map<int, list<string>> &hash_table) {
-    
+    int key;
+    cout << "Enter hash index to remove: ";
+    cin >> key;
 
+    auto it == hash_table.find(key);
+    if (it == hash_table.end) {
+        cout << "Key " << key << " not found; nothing removed." << endl;
+    } else {
+        hash_table.erase(it);
+
+    }
 }
 
 void modify_key(map<int, list<string>> & hash_table) {
