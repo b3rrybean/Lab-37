@@ -52,12 +52,20 @@ void search_key(const map<int, list<string>> &hash_table) {
 }
 
 void add_key(map<int, list<string>> &hash_table) {
+    int key;
+    string code;
 
+    cout << "Enter new has index (int): ";
+    cin >> key;
+    cout << "Enter a code string to store at that key: ";
+    cin >> code;
 
+    hash_table[key].push_back(code);
+    cout << "Added code \"" << code << "\" at key " << key << "." << endl;
 }
 
 void remove_key(map<int, list<string>> &hash_table) {
-
+    
 
 }
 
