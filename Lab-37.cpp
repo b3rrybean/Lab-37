@@ -14,12 +14,28 @@ int gen_hash_index(const string &s) {
 }
 
 void print_first_100(const map<int, list<string>> &hash_table) {
+    
+    // PASTED FROM MAIN PREVIOUSLY
 
+    int shown = 0;
+    for (auto &entry : hash_table) {
+        if (shown >= 100) break;
 
+        int hash_index = entry.first;
+        const list<string> &codes = entry.second;
+
+        cout << "Hash index: " << hash_index << " -> ";
+        for (const string &s : codes) {
+            cout << s << " ";
+        }
+        cout << endl;
+
+        shown++;
+    }
 }
 
 void search_key(const map<int, list<string>> &hash_table) {
-
+    
 
 }
 
