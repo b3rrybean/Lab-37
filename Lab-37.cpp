@@ -41,10 +41,11 @@ void search_key(const map<int, list<string>> &hash_table) {
 
     auto it = hash_table.find(key);
     if (it == hash_table.end()) {
-        cout << "key " << key << " not found in table." << endl;
+        cout << "Key " << key << " not found in table." << endl;
     } else {
         cout << "Key " << key << " found. Codes: ";
-        for (const string &s :it->second) {
+        for (const string &s : it->second) {
+            cout << s << " ";
         }
         cout << endl;
     }
