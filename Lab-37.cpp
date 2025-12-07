@@ -69,12 +69,12 @@ void remove_key(map<int, list<string>> &hash_table) {
     cout << "Enter hash index to remove: ";
     cin >> key;
 
-    auto it == hash_table.find(key);
-    if (it == hash_table.end) {
+    auto it = hash_table.find(key);
+    if (it == hash_table.end()) {
         cout << "Key " << key << " not found; nothing removed." << endl;
     } else {
         hash_table.erase(it);
-
+        cout << "Key " << key << " and all its codes were removed." << endl;
     }
 }
 
