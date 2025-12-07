@@ -79,8 +79,21 @@ void remove_key(map<int, list<string>> &hash_table) {
 }
 
 void modify_key(map<int, list<string>> & hash_table) {
+    int old_key;
+    int new_key;
+    cout << "Enter existing hash index to modify: ";
+    cin >> old_key;
+    cout << "Enter new hash index value: ";
+    cin >> new_key;
 
+    auto it - hash_table.find(old_key);
+    if (it == hash_table.end()) {
+        cout << "Key " << old_key << "not found, cannot modify." << endl;
+        return
+    }
 
+    // copy the list of codes from old key
+    
 }
 
 
