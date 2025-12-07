@@ -13,6 +13,32 @@ int gen_hash_index(const string &s) {
     return total;
 }
 
+void print_first_100(const map<int, list<string>> &hash_table) {
+
+
+}
+
+void search_key(const map<int, list<string>> &hash_table) {
+
+
+}
+
+void add_key(map<int, list<string>> &hash_table) {
+
+
+}
+
+void remove_key(map<int, list<string>> &hash_table) {
+
+
+}
+
+void modify_key(map<int, list<string>> & hash_table) {
+
+
+}
+
+
 int main() {
     ifstream fin("lab-37-data-3.txt");
 
@@ -31,23 +57,8 @@ int main() {
         hash_table[index].push_back(code);
     }
 
-    int shown = 0;
-    for (auto &entry : hash_table) {
-        if (shown >= 100) break;
+    // interactive menu loop
 
-        int hash_index = entry.first;
-        const list<string> &codes = entry.second;
-
-        cout << "Hash index: " << hash_index << " -> ";
-
-        // print
-        for (const string &s : codes) {
-            cout << s << " ";
-        }
-
-        cout << endl;
-        shown++;
-    }
 
     return 0;
 }
