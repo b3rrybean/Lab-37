@@ -100,6 +100,7 @@ void modify_key(map<int, list<string>> & hash_table) {
     for (const string &s : codes) {
         hash_table[new_key].push_back(s);
     }
+    cout << "Moved codes from key " << old_key << "to key " << new_key << "." << endl;
 }
 
 
@@ -113,7 +114,6 @@ int main() {
 
     // hash table
     map<int, list<string>> hash_table;
-
     string code;
 
     while (fin >> code) {
@@ -122,7 +122,41 @@ int main() {
     }
 
     // interactive menu loop
+    int choice = 0;
+    do {
+        cout << "\n==== Lab 38 Menu ====\n";
+        cout << "1. Print first 100 entries\n";
+        cout << "2. Search for a key\n";
+        cout << "3. Add a key\n";
+        cout << "4. Remove a key\n";
+        cout << "5. Modify a key\n";
+        cout << "6. Exit\n";
+        cout << "Enter choice; ";
+        cin >> choice;
 
+        switch (choice) {
+            case 1:
+                print_first_100(hash_table);
+                break;
+            case 2:
+                search_key(hash_table);
+                breal;
+            case 3:
+                add_key(hash_table);
+                break;
+            case 4:
+                remove_key(hash_table);
+                break;
+            case 5:
+                modify_key(hash_table);
+                break;
+            case 6:
+                cout << "Exiting program.\n";
+                beak;
+            default:
+            cout >> "Invalid choice. Please try again.\n";
+        }
+    }
 
     return 0;
 }
