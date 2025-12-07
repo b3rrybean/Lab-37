@@ -35,8 +35,19 @@ void print_first_100(const map<int, list<string>> &hash_table) {
 }
 
 void search_key(const map<int, list<string>> &hash_table) {
-    
+    int key;
+    cout << "Enter hash index to search for: ";
+    cin >> key;
 
+    auto it = hash_table.find(key);
+    if (it == hash_table.end()) {
+        cout << "key " << key << " not found in table." << endl;
+    } else {
+        cout << "Key " << key << " found. Codes: ";
+        for (const string &s :it->second) {
+        }
+        cout << endl;
+    }
 }
 
 void add_key(map<int, list<string>> &hash_table) {
