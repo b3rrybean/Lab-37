@@ -55,7 +55,7 @@ void add_key(map<int, list<string>> &hash_table) {
     int key;
     string code;
 
-    cout << "Enter new has index (int): ";
+    cout << "Enter new hash index (int): ";
     cin >> key;
     cout << "Enter a code string to store at that key: ";
     cin >> code;
@@ -100,7 +100,7 @@ void modify_key(map<int, list<string>> & hash_table) {
     for (const string &s : codes) {
         hash_table[new_key].push_back(s);
     }
-    cout << "Moved codes from key " << old_key << "to key " << new_key << "." << endl;
+    cout << "Moved codes from key " << old_key << " to key " << new_key << "." << endl;
 }
 
 
@@ -131,7 +131,7 @@ int main() {
         cout << "4. Remove a key\n";
         cout << "5. Modify a key\n";
         cout << "6. Exit\n";
-        cout << "Enter choice; ";
+        cout << "Enter choice: ";
         cin >> choice;
 
         switch (choice) {
@@ -140,7 +140,7 @@ int main() {
                 break;
             case 2:
                 search_key(hash_table);
-                breal;
+                break;
             case 3:
                 add_key(hash_table);
                 break;
@@ -152,11 +152,11 @@ int main() {
                 break;
             case 6:
                 cout << "Exiting program.\n";
-                beak;
+                break;
             default:
-            cout >> "Invalid choice. Please try again.\n";
+            cout << "Invalid choice. Please try again.\n";
         }
-    }
+    } while (choice != 6);
 
     return 0;
 }
